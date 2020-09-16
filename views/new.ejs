@@ -1,0 +1,23 @@
+<%- include("layouts/header") %>
+
+<div class="ui raised very padded text container segment">
+    <h1>Publish Your Blog</h1>
+
+    <form class="ui form" action="/blogs" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" placeholder="This will be the title of your blog">
+        </div>
+        <div class="field">
+            <label>Image URL</label>
+            <input type="text" name="blog[image]" placeholder="This will be the image of your blog">
+        </div>
+        <div class="field">
+            <label>Text</label>
+            <textarea name="blog[body]" placeholder="Blog Away!"></textarea>
+        </div>  
+        <button class="ui right floated basic black button">Publish</button> 
+        </div>
+    </form> 
+
+<%- include("layouts/footer") %>

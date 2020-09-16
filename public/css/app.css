@@ -1,0 +1,38 @@
+.container.segment {
+    margin: 7.0em; 
+}
+
+i.icon {
+    font-size: 2em;
+}
+
+/* #date-of-blog, h4 {
+    text-align: center;
+} */
+
+body {
+    margin-top: 100px;
+}
+
+#header-index {
+    color: black;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.blog.header {
+    color: black;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.blog.header:hover {
+    color: rgb(57, 126, 255);
+    transition: all 0.2s;
+}
+
+.blog.header:active {
+    color: red;
+    transition: all 0.2s;
+}

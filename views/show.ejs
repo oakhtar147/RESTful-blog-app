@@ -1,0 +1,31 @@
+<%- include("layouts/header") %>
+
+<div class="ui black center aligned raised very padded text container segment">
+    <h2 class="ui header"><%= blog.title %></h2>
+
+    <h4 class="ui horizontal divider header">
+        <i class="hourglass half icon"></i>
+        Dated
+    </h4>
+    <span id="date-of-blog"><%= blog.created %></span>
+
+    <h4 class="ui horizontal divider header">
+        <i class="comment alternate outline icon"></i>
+        Content
+    </h4>
+    
+    <img class="ui fluid image" src="<%= blog.image %>" alt="blog-cover-image">
+
+    <div class="ui left aligned segment">
+        <p><%- blog.body %></p>
+    </div>
+
+    <form action="/blogs/<%=blog._id %>?_method=DELETE" METHOD="POST">
+        <button class="negative ui right floated button">Delete</button> 
+    </form>
+    
+    <span><%= blog.body.length %> characters, <%= blog.body.split(" ").length %> words</span>
+    <a class="ui right floated black button" href="/blogs/<%= blog._id %>/edit">Edit</a> 
+</div>
+
+<%- include("layouts/footer") %>

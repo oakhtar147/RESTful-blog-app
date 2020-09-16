@@ -1,0 +1,22 @@
+<%- include("layouts/header") %>
+
+<div class="ui secondary text container very padded raised black segment">
+
+    <h2 id="header-index"><i class="blogger b icon"></i>Latest Bloggs&#8482;</h2>
+
+    <div class="ui divider"></div>
+
+    <div class="ui center aligned segment">
+        <% blogs.forEach(blog => { %>
+        
+            <h2><a class="blog header" href="blogs/<%= blog._id %>" target="blank">"<%= blog.title %>"</a></h2>
+            <img src="<%= blog.image %>"/>
+            <span><%= blog.created %></span> 
+            <p><%- blog.body.substring(0, 100) %> . . .</p>
+            <div class="ui divider"></div>
+            
+        <% }); %>
+    </div>
+</div>
+
+<%- include("layouts/footer") %>
